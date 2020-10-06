@@ -1,0 +1,198 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+
+    background-color: #ffa7d3;
+}
+
+.trunk, .branch {
+    border-radius: 25px;
+    background: linear-gradient(to right, #756262, #292525);
+}
+
+.trunk {
+    position: relative;
+
+    width: 10px;
+    height: 420px;
+    margin: 0 auto;
+}
+
+.branch {
+    position: absolute;
+
+    width: 5px;
+
+    transform-origin: bottom center;
+}
+
+.branch:nth-child(even) {
+    transform: rotate(60deg);
+}
+
+.branch:nth-child(odd) {
+    transform: rotate(-60deg);
+}
+
+.branch:nth-child(1) {
+    top: 180px;
+
+    height: 180px;
+}
+
+.branch:nth-child(2) {
+    top: 180px;
+
+    height: 160px;
+}
+
+.branch:nth-child(3) {
+    top: 120px;
+
+    height: 150px;
+}
+
+.branch:nth-child(4) {
+    top: 120px;
+
+    height: 130px;
+}
+
+.branch:nth-child(5) {
+    top: 70px;
+
+    height: 110px;
+}
+
+.branch:nth-child(6) {
+    top: 60px;
+
+    height: 100px;
+}
+
+.branch:nth-child(7) {
+    top: 20px;
+
+    height: 70px;
+}
+
+.branch:nth-child(8) {
+    top: 0px;
+
+    height: 60px;
+}
+
+.leaf {
+    position: absolute;
+
+    width: 15px;
+    height: 17px;
+
+    border-radius: 75% 0 75% 0;
+    background: linear-gradient(to right, #8e74a0, #582097);
+}
+
+.leaf:nth-child(1) {
+    top: 0px;
+}
+
+.leaf:nth-child(2) {
+    top: 20px;
+}
+
+.leaf:nth-child(3) {
+    top: 35px;
+}
+
+.leaf:nth-child(4) {
+    top: 50px;
+}
+
+.leaf:nth-child(5) {
+    top: 65px;
+}
+
+.leaf:nth-child(6) {
+    top: 80px;
+}
+
+.leaf:nth-child(7) {
+    top: 95px;
+}
+
+.leaf:nth-child(8) {
+    top: 110px;
+}
+
+.leaf:nth-child(9) {
+    top: 125px;
+}
+
+.leaf:nth-child(10) {
+    top: 140px;
+}
+
+.leaf:nth-child(11) {
+    top: 155px;
+}
+
+@keyframes leaf-odd-grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes leaf-even-grow {
+    0% {
+        transform: rotate(-90deg) scale(0);
+    }
+    100% {
+        transform: rotate(-90deg) scale(1);
+    }
+}
+
+.leaf:nth-child(odd) {
+    left: 100%;
+
+    transform-origin: 0% 100%;
+    animation-name: leaf-odd-grow;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+}
+
+.leaf:nth-child(even) {
+    right: -50%;
+
+    transform-origin: 50% 100%;
+    animation-name: leaf-even-grow;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+}
+
+.switch__on__spring {
+    position: absolute;
+    top: 50px;
+    background: none;
+    border: none;
+
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.switch__on__spring:focus, .switch__on__spring:hover {
+    cursor: pointer;
+    outline: none;
+}
